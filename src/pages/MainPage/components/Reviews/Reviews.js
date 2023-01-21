@@ -45,7 +45,7 @@ function SamplePrevArrow(props) {
 
 const Reviews = () => {
   const { title, starIcon, reviews } = ContentData;
-  var settings = {
+  let settings = {
     dots: true,
     infinite: true,
     speed: 500,

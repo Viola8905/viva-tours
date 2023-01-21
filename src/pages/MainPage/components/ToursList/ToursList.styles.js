@@ -12,10 +12,16 @@ export const HeaderContainer = styled.div`
 `;
 
 export const Title = styled.h1`
+  text-align: center;
   font-weight: 300;
-  font-size: 48px;
-  line-height: 58px;
-  /* margin: 20px 0; */
+  font-size: 38px;
+  @media ${screen.tb} {
+    font-size: 48px;
+  }
+`;
+
+export const SliderContainer = styled.div`
+  padding: 10px 30px;
 `;
 
 export const Subtitle = styled.span`
@@ -42,25 +48,15 @@ export const Icon = styled.img`
   height: 100%;
 `;
 
-export const CardsRow = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 0 5px;
-  @media ${screen.tb} {
-    padding: 0;
-  }
-`;
-
 export const Card = styled.article`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   overflow: hidden;
-  max-width: 326px;
 `;
 
-export const TourImage = styled.div``;
+export const TourImage = styled.div`
+  width: 100%;
+`;
 
 export const ContentWrapper = styled.div`
   padding: 10px;
