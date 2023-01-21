@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { screen } from "../../../../styles/configuration";
 
 export const ReviewsWrapper = styled.section`
   padding: 40px 0;
@@ -6,8 +7,12 @@ export const ReviewsWrapper = styled.section`
 export const Title = styled.h1`
   text-align: center;
   font-weight: 300;
-  font-size: 48px;
+  font-size: 38px;
   line-height: 58px;
+  padding: 0 0 20px 0;
+  @media ${screen.tb} {
+    font-size: 48px;
+  }
 `;
 
 export const Review = styled.article`
