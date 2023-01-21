@@ -1,6 +1,9 @@
 import React from "react";
 import { ContentData } from "./Reviews.data";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import './Reviews.css'
 import {
   Header,
   HeaderRow,
@@ -17,11 +20,28 @@ import {
 
 const Reviews = () => {
   const { title, starIcon, reviews } = ContentData;
-
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    centerPadding: "20px",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToScroll: 1,
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
   return (
     <ReviewsWrapper>
       <Title dangerouslySetInnerHTML={{ __html: title }} />
-      <ReviewsRow>
+
+      <Slider {...settings} style={{ backgroundColor: "blue" }}>
         {reviews.map((review) => {
           return (
             <Review>
@@ -54,7 +74,7 @@ const Reviews = () => {
             </Review>
           );
         })}
-      </ReviewsRow>
+      </Slider>
     </ReviewsWrapper>
   );
 };

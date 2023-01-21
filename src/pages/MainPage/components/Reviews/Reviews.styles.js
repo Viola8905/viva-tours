@@ -16,18 +16,14 @@ export const ReviewsRow = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-	margin-top: 20px;
+  margin-top: 20px;
 `;
 
 export const Review = styled.article`
-  flex: 0 0 90%;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   overflow: hidden;
-  @media ${screen.tb} {
-    flex: 0 0 45%;
-  }
 `;
 
 export const Header = styled.div`
@@ -36,13 +32,13 @@ export const Header = styled.div`
 `;
 export const HeaderRow = styled.div`
   display: flex;
-	gap: 10px;
+  gap: 10px;
 `;
 export const UserInfo = styled.div`
   display: flex;
   flex-direction: column;
   color: #ffff;
-	letter-spacing: 0.1em;
+  letter-spacing: 0.1em;
   & > span {
     font-weight: 700;
     font-size: 16px;
@@ -68,5 +64,5 @@ export const ReviewContent = styled.div`
 
 export const ReviewTitle = styled.h1``;
 export const ReviewDescr = styled.div`
- padding-top: 10px;
+  padding-top: 10px;
 `;
