@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { screen } from "../../../../styles/configuration";
 
 export const ReviewsWrapper = styled.section`
   padding: 40px 0;
@@ -9,14 +8,6 @@ export const Title = styled.h1`
   font-weight: 300;
   font-size: 48px;
   line-height: 58px;
-`;
-
-export const ReviewsRow = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
 `;
 
 export const Review = styled.article`
@@ -66,3 +57,7 @@ export const ReviewTitle = styled.h1``;
 export const ReviewDescr = styled.div`
   padding-top: 10px;
 `;
+
+export const SliderContainer = styled.div`
+	padding: 10px 30px;
+`

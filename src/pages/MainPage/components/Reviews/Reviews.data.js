@@ -1,9 +1,12 @@
 import userAvatar from "../../../../assets/user-avatar.png";
 import starIcon from "../../../../assets/star-icon.png";
+import nextArrow from '../../../../assets/next.png'
+import prevArrow from "../../../../assets/left-arrow.png";
 
 export const ContentData = {
   title: "Відгуки",
   starIcon: { src: starIcon, alt: "star icon" },
+	sliderArrows:{nextArr: {src: nextArrow, alt: 'next slide arrow'}, prevArr: {src: prevArrow, alt: 'prev slide arrow'}},
   reviews: [
     {
       id: "1",
