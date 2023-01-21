@@ -1,5 +1,5 @@
 import React from "react";
-import { Hero, Reviews, SocialMedia, ToursList } from "./components";
+import { AboutUs, Hero, Reviews, SocialMedia, ToursList } from "./components";
 import { Container } from "./MainPage.styles";
 
 const MainPage = () => {
@@ -8,6 +8,9 @@ const MainPage = () => {
       <Hero />
       <Container>
         <ToursList />
+      </Container>
+      <AboutUs />
+      <Container>
         <Reviews />
         <SocialMedia />
       </Container>
