@@ -81,73 +81,77 @@ const ToursList = () => {
     ],
   };
   return (
-    <ToursSection>
-      <HeaderContainer>
-        <Title dangerouslySetInnerHTML={{ __html: title }} />
-        <Subtitle dangerouslySetInnerHTML={{ __html: subtitle }} />
-        <IconsList>
-          {iconsList.map((item) => {
-            return (
-              <IconContainer key={item.id}>
-                <Icon src={item.src} />
-              </IconContainer>
-            );
-          })}
-        </IconsList>
-      </HeaderContainer>
-      <SliderContainer>
-        <Slider {...settings}>
-          {toursList.map((tour) => {
-            return (
-              <Card key={tour.id}>
-                <TourImage>
-                  <img
-                    src={tour.image.src}
-                    alt={tour.image.alt}
-                    style={{ width: "100%" }}
-                  />
-                </TourImage>
-                <ContentWrapper>
-                  <TourTitle dangerouslySetInnerHTML={{ __html: tour.title }} />
-                  <Row>
-                    <Price>{tour.price}</Price>
-                    <Date>{tour.period}</Date>
-                  </Row>
-                  <DistanceRow>
+    <div id="hot-tours">
+      <ToursSection>
+        <HeaderContainer>
+          <Title dangerouslySetInnerHTML={{ __html: title }} />
+          <Subtitle dangerouslySetInnerHTML={{ __html: subtitle }} />
+          <IconsList>
+            {iconsList.map((item) => {
+              return (
+                <IconContainer key={item.id}>
+                  <Icon src={item.src} />
+                </IconContainer>
+              );
+            })}
+          </IconsList>
+        </HeaderContainer>
+        <SliderContainer>
+          <Slider {...settings}>
+            {toursList.map((tour) => {
+              return (
+                <Card key={tour.id}>
+                  <TourImage>
                     <img
-                      src={tourCardIcons.location.src}
-                      alt={tourCardIcons.location.alt}
+                      src={tour.image.src}
+                      alt={tour.image.alt}
+                      style={{ width: "100%" }}
                     />
-                    {tour.distance.from}
-                    <div style={{ alignSelf:'center' }}>
+                  </TourImage>
+                  <ContentWrapper>
+                    <TourTitle
+                      dangerouslySetInnerHTML={{ __html: tour.title }}
+                    />
+                    <Row>
+                      <Price>{tour.price}</Price>
+                      <Date>{tour.period}</Date>
+                    </Row>
+                    <DistanceRow>
                       <img
-                        src={tourCardIcons.arrow.src}
-                        alt={tourCardIcons.arrow.alt}
+                        src={tourCardIcons.location.src}
+                        alt={tourCardIcons.location.alt}
                       />
-                    </div>
-                    {tour.distance.to}
-                  </DistanceRow>
-                  <DurationRow>
-                    <img
-                      src={tourCardIcons.clock.src}
-                      alt={tourCardIcons.clock.alt}
+                      {tour.distance.from}
+                      <div style={{ alignSelf: "center" }}>
+                        <img
+                          src={tourCardIcons.arrow.src}
+                          alt={tourCardIcons.arrow.alt}
+                        />
+                      </div>
+                      {tour.distance.to}
+                    </DistanceRow>
+                    <DurationRow>
+                      <img
+                        src={tourCardIcons.clock.src}
+                        alt={tourCardIcons.clock.alt}
+                      />
+                      {tour.duration.txt}
+                      <b>{tour.duration.time}</b>
+                    </DurationRow>
+                    <Description
+                      dangerouslySetInnerHTML={{ __html: tour.descr }}
                     />
-                    {tour.duration.txt}
-                    <b>{tour.duration.time}</b>
-                  </DurationRow>
-                  <Description
-                    dangerouslySetInnerHTML={{ __html: tour.descr }}
-                  />
-                  <ButtonWrapper>
-                    <DetailsBtn>{btnTxt}</DetailsBtn>
-                  </ButtonWrapper>
-                </ContentWrapper>
-              </Card>
-            );
-          })}
-        </Slider>
-      </SliderContainer>
-    </ToursSection>
+                    <ButtonWrapper>
+                      <DetailsBtn>{btnTxt}</DetailsBtn>
+                    </ButtonWrapper>
+                  </ContentWrapper>
+                </Card>
+              );
+            })}
+          </Slider>
+        </SliderContainer>
+      </ToursSection>
+    </div>
   );
 };
 

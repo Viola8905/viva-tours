@@ -1,4 +1,5 @@
 import React from "react";
+import { scrollToElement } from "../../../../utils";
 import { ContentData } from "./Hero.data";
 import {
   BtnTextWrapper,
@@ -22,7 +23,7 @@ const Hero = () => {
           <Section>
             <Title dangerouslySetInnerHTML={{ __html: title }} />
             <Subtitle dangerouslySetInnerHTML={{ __html: subtitle }} />
-            <ButtonRow>
+            <ButtonRow onClick={() => scrollToElement("hot-tours")}>
               <LinkButton light>
                 <img src={btn1.img.src} alt={btn1.img.alt} />
                 <BtnTextWrapper>{btn1.txt}</BtnTextWrapper>

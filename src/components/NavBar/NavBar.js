@@ -10,7 +10,7 @@ const NavBar = () => {
   const { menuLinks, logo } = ContentData;
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" sticky="top">
       <Container>
         <Navbar.Brand href="#home">
           <ImageContainer>
