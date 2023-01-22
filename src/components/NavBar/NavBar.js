@@ -3,6 +3,7 @@ import { ContentData } from "./NavBar.data";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { scrollToElement } from "../../utils/scrollToElement/scrollToElement";
 
 import { ImageContainer } from "./NavBar.styles";
 
@@ -21,7 +22,14 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             {menuLinks.map((link) => {
-              return <Nav.Link key={link.id}>{link.name}</Nav.Link>;
+              return (
+                <Nav.Link
+                  key={link.id}
+                  onClick={() => scrollToElement(link.scrollId)}
+                >
+                  {link.name}
+                </Nav.Link>
+              );
             })}
           </Nav>
         </Navbar.Collapse>

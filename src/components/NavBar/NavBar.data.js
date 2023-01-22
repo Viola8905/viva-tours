@@ -1,11 +1,11 @@
-import logo from '../../assets/viva-logo.png'
+import logo from "../../assets/viva-logo.png";
 
 export const ContentData = {
   menuLinks: [
-    { id: 1, name: "Головна" },
-    { id: 2, name: "Тури" },
-    { id: 3, name: "Відгуки" },
-    { id: 4, name: "Про нас" },
+    { id: 1, name: "Головна", scrollId: "hero" },
+    { id: 2, name: "Тури", scrollId: "hot-tours" },
+    { id: 3, name: "Відгуки", scrollId: "reviews" },
+    { id: 4, name: "Про нас", scrollId: "about-us" },
   ],
-	logo:{src: logo, alt:'viva tour logo'}
+  logo: { src: logo, alt: "viva tour logo" },
 };

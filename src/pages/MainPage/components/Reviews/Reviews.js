@@ -65,7 +65,7 @@ const Reviews = () => {
     ],
   };
   return (
-    <ReviewsWrapper>
+    <ReviewsWrapper id='reviews'>
       <Title dangerouslySetInnerHTML={{ __html: title }} />
       <SliderContainer>
         <Slider {...settings}>

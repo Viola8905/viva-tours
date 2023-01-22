@@ -6,7 +6,7 @@ const AboutUs = () => {
 	const {title, text, btnText} = ContentData
 
 	return (
-    <AboutUsSection>
+    <AboutUsSection id='about-us'>
       <Title dangerouslySetInnerHTML={{ __html: title }} />
       <Text dangerouslySetInnerHTML={{ __html: text }} />
       <ButtonWrapper>

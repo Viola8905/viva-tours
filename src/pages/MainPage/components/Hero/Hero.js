@@ -17,14 +17,14 @@ const Hero = () => {
   const { title, subtitle, btn1, btn2 } = ContentData;
 
   return (
-    <Wrapper>
+    <Wrapper id='hero'>
       <PageBackground>
         <Container>
           <Section>
             <Title dangerouslySetInnerHTML={{ __html: title }} />
             <Subtitle dangerouslySetInnerHTML={{ __html: subtitle }} />
-            <ButtonRow onClick={() => scrollToElement("hot-tours")}>
-              <LinkButton light>
+            <ButtonRow>
+              <LinkButton light onClick={() => scrollToElement("hot-tours")}>
                 <img src={btn1.img.src} alt={btn1.img.alt} />
                 <BtnTextWrapper>{btn1.txt}</BtnTextWrapper>
               </LinkButton>
