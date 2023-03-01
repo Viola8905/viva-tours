@@ -13,6 +13,7 @@ import prevArrow from "../../../../assets/left-arrow.png";
 
 export const ContentData = {
   title: "Найближчі Тури",
+  allToursBtn: "ДИВИТИСЯ ВСІ",
   subtitle: "Комфортно, Цікаво, Якісно!",
   sliderArrows: {
     nextArr: { src: nextArrow, alt: "next slide arrow" },

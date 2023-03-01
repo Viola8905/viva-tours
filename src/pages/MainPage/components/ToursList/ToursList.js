@@ -2,11 +2,13 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
+
 import { ContentData } from "./ToursList.data";
 import {
   ButtonWrapper,
   Card,
-	SliderContainer,
+  SliderContainer,
   ContentWrapper,
   Date,
   Description,
@@ -50,10 +52,16 @@ function SamplePrevArrow(props) {
   );
 }
 
-
 const ToursList = () => {
-  const { title, subtitle, iconsList, tourCardIcons, btnTxt, toursList } =
-    ContentData;
+  const {
+    title,
+    allToursBtn,
+    subtitle,
+    iconsList,
+    tourCardIcons,
+    btnTxt,
+    toursList,
+  } = ContentData;
   let settings = {
     dots: true,
     infinite: true,
@@ -85,6 +93,11 @@ const ToursList = () => {
       <ToursSection>
         <HeaderContainer>
           <Title dangerouslySetInnerHTML={{ __html: title }} />
+          <ButtonWrapper>
+            <DetailsBtn>
+              <Link to='/all-tours'>{allToursBtn}</Link>
+            </DetailsBtn>
+          </ButtonWrapper>
           <Subtitle dangerouslySetInnerHTML={{ __html: subtitle }} />
           <IconsList>
             {iconsList.map((item) => {

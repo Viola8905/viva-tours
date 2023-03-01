@@ -112,7 +112,7 @@ export const Description = styled.div`
 export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
-  padding: 15px 0;
+  padding: 20px 0;
 `;
 
 export const DetailsBtn = styled.button`
@@ -124,8 +124,9 @@ export const DetailsBtn = styled.button`
   gap: 10px;
   background: #06d6a0;
   border-radius: 100px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  color: #ffffff; ;
+  color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
