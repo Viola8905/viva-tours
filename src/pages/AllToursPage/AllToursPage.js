@@ -13,6 +13,10 @@ import {
 const AllToursPage = () => {
   const { toursList } = ContentData;
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <TopSection>

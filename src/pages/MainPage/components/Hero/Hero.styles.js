@@ -28,7 +28,7 @@ export const Section = styled.div`
   align-items: center;
   padding: 0 3px;
   backdrop-filter: blur(10px);
-  height: 50%;
+  height: 100%;
   width: 100%;
   color: white;
 `;

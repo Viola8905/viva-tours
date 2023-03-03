@@ -122,3 +122,23 @@ export const ListElement = styled.li`
       center / contain no-repeat;
   }
 `;
+
+export const OtherInfoSection = styled.section`
+  font-size: 18px;
+  font-weight: 500;
+  span {
+    color: #06d6a0;
+  }
+  p {
+    margin: 20px 10px;
+  }
+`;
+
+export const IframeWrapper = styled.div`
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  @media ${screen.tb} {
+    justify-content: flex-start;
+  }
+`;
