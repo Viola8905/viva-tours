@@ -5,7 +5,8 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { scrollToElement } from "../../utils/scrollToElement/scrollToElement";
 
-import { ImageContainer } from "./NavBar.styles";
+import { ImageContainer, NavBarLink } from "./NavBar.styles";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const { menuLinks, logo } = ContentData;
@@ -23,12 +24,12 @@ const NavBar = () => {
           <Nav className="me-auto">
             {menuLinks.map((link) => {
               return (
-                <Nav.Link
+                <NavBarLink
                   key={link.id}
                   onClick={() => scrollToElement(link.scrollId)}
                 >
-                  {link.name}
-                </Nav.Link>
+                  <Link to={`/#${link.scrollId}`}>{link.name}</Link>
+                </NavBarLink>
               );
             })}
           </Nav>

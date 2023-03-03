@@ -1,18 +1,34 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { FilterLayout, TopSection } from "./AllToursPage.styles";
+import TourCard from "../../components/TourCard";
+import { ContentData } from "../MainPage/components/ToursList/ToursList.data";
+import { Container } from "../MainPage/MainPage.styles";
+
+import {
+  CardsWrapper,
+  CardWrapper,
+  FilterLayout,
+  TopSection,
+} from "./AllToursPage.styles";
 
 const AllToursPage = () => {
-  const navigate = useNavigate();
+  const { toursList } = ContentData;
 
-  function goBack() {
-    navigate(-1);
-  }
   return (
     <>
       <TopSection>
         <FilterLayout>Одноденні Тури</FilterLayout>
       </TopSection>
+      <Container>
+        <CardsWrapper>
+          {toursList.map((tour) => {
+            return (
+              <CardWrapper>
+                <TourCard tour={tour} />
+              </CardWrapper>
+            );
+          })}
+        </CardsWrapper>
+      </Container>
     </>
   );
 };

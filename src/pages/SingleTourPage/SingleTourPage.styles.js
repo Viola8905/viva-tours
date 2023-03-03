@@ -108,8 +108,11 @@ export const ListElement = styled.li`
   color: #666666;
   font-size: 16px;
   line-height: 1.8;
+  display: flex;
+  align-items: center;
   &:before {
     content: "";
+    margin: auto 0;
     display: inline-block;
     width: 23px;
     height: 16px;

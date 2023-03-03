@@ -24,4 +24,5 @@ export const SMRow = styled.div`
   gap: 20px;
 `;
 
-export const LogoLink = styled.a``;
+export const LogoLink = styled.a`
+`;

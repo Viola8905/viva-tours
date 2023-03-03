@@ -49,40 +49,37 @@ export const Link = styled.li`
   }
 `;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export const NavBarLink = styled.div`
+  @media ${screen.lp} {
+    margin: 0 20px;
+  }
+  & > a {
+    color: #212224;
+    font-weight: 300;
+    font-size: 18px;
+    &:hover {
+      color: rgba(6, 214, 160, 1);
+    }
+  }
+`;
 
 export const MBVersion = styled.div`
   display: block;
   @media ${screen.lp} {
     display: none;
   }
-	position: relative;
+  position: relative;
 `;
 
 export const MbNavbar = styled.section`
   width: 100%;
   display: flex;
 
-
   flex-direction: column;
   /* position: fixed;
   /* left: -100%; */
- 
-  transition: 0.5s; 
+
+  transition: 0.5s;
 `;
 
 export const MbImageContainer = styled.div``;
@@ -92,10 +89,8 @@ export const MbLinksList = styled.ul`
   display: flex;
   flex-direction: column;
   z-index: 10000000000;
-   position: fixed;
+  position: fixed;
   left: -100%;
-
-  
 `;
 export const MbLink = styled.li`
   height: 56px;
