@@ -13,7 +13,7 @@ const NavBar = () => {
   return (
     <Navbar bg="light" expand="lg" sticky="top">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <ImageContainer>
             <img src={logo.src} alt={logo.alt} />
           </ImageContainer>

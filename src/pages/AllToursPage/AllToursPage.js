@@ -1,11 +1,20 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { FilterLayout, TopSection } from "./AllToursPage.styles";
 
 const AllToursPage = () => {
-	return (
-		<div>
-			hello
-		</div>
-	);
+  const navigate = useNavigate();
+
+  function goBack() {
+    navigate(-1);
+  }
+  return (
+    <>
+      <TopSection>
+        <FilterLayout>Одноденні Тури</FilterLayout>
+      </TopSection>
+    </>
+  );
 };
 
 export default AllToursPage;

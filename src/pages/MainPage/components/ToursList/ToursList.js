@@ -3,29 +3,20 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
+import TourCard from "../../../../components/TourCard";
 
 import { ContentData } from "./ToursList.data";
 import {
   ButtonWrapper,
-  Card,
   SliderContainer,
-  ContentWrapper,
-  Date,
-  Description,
   DetailsBtn,
-  DistanceRow,
-  DurationRow,
   HeaderContainer,
   Icon,
   IconContainer,
   IconsList,
-  Price,
-  Row,
   Subtitle,
   Title,
-  TourImage,
   ToursSection,
-  TourTitle,
 } from "./ToursList.styles";
 
 function SampleNextArrow(props) {
@@ -53,21 +44,14 @@ function SamplePrevArrow(props) {
 }
 
 const ToursList = () => {
-  const {
-    title,
-    allToursBtn,
-    subtitle,
-    iconsList,
-    tourCardIcons,
-    btnTxt,
-    toursList,
-  } = ContentData;
+  const { title, allToursBtn, subtitle, iconsList, toursList } = ContentData;
+
   let settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 2,
+    slidesToScroll: 2,
     arrows: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -88,6 +72,7 @@ const ToursList = () => {
       },
     ],
   };
+
   return (
     <div id="hot-tours">
       <ToursSection>
@@ -95,7 +80,7 @@ const ToursList = () => {
           <Title dangerouslySetInnerHTML={{ __html: title }} />
           <ButtonWrapper>
             <DetailsBtn>
-              <Link to='/all-tours'>{allToursBtn}</Link>
+              <Link to="/all-tours">{allToursBtn}</Link>
             </DetailsBtn>
           </ButtonWrapper>
           <Subtitle dangerouslySetInnerHTML={{ __html: subtitle }} />
@@ -112,54 +97,7 @@ const ToursList = () => {
         <SliderContainer>
           <Slider {...settings}>
             {toursList.map((tour) => {
-              return (
-                <Card key={tour.id}>
-                  <TourImage>
-                    <img
-                      src={tour.image.src}
-                      alt={tour.image.alt}
-                      style={{ width: "100%" }}
-                    />
-                  </TourImage>
-                  <ContentWrapper>
-                    <TourTitle
-                      dangerouslySetInnerHTML={{ __html: tour.title }}
-                    />
-                    <Row>
-                      <Price>{tour.price}</Price>
-                      <Date>{tour.period}</Date>
-                    </Row>
-                    <DistanceRow>
-                      <img
-                        src={tourCardIcons.location.src}
-                        alt={tourCardIcons.location.alt}
-                      />
-                      {tour.distance.from}
-                      <div style={{ alignSelf: "center" }}>
-                        <img
-                          src={tourCardIcons.arrow.src}
-                          alt={tourCardIcons.arrow.alt}
-                        />
-                      </div>
-                      {tour.distance.to}
-                    </DistanceRow>
-                    <DurationRow>
-                      <img
-                        src={tourCardIcons.clock.src}
-                        alt={tourCardIcons.clock.alt}
-                      />
-                      {tour.duration.txt}
-                      <b>{tour.duration.time}</b>
-                    </DurationRow>
-                    <Description
-                      dangerouslySetInnerHTML={{ __html: tour.descr }}
-                    />
-                    <ButtonWrapper>
-                      <DetailsBtn>{btnTxt}</DetailsBtn>
-                    </ButtonWrapper>
-                  </ContentWrapper>
-                </Card>
-              );
+              return <TourCard tour={tour} />;
             })}
           </Slider>
         </SliderContainer>
