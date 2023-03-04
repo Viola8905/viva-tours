@@ -6,7 +6,6 @@ import Slider from "react-slick";
 import "./SingleTourPage.css";
 
 import {
-  IframeWrapper,
   ListElement,
   Location,
   LocationBox,
@@ -98,7 +97,7 @@ const SingleTourPage = () => {
             {tour.images.map((image) => {
               return (
                 <div style={{ padding: "10px 50px" }}>
-                  <img src={image} style={{ width: "100%" }} />
+                  <img src={image} style={{ width: "100%" }} alt="image"/>
                 </div>
               );
             })}
