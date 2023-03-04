@@ -6,7 +6,6 @@ import clockIcon from "../../../../assets/clock-icon.png";
 import locationIcon from "../../../../assets/location-icon.png";
 import arrowIcon from "../../../../assets/arrow-icon.png";
 import Vienna from "../../../../assets/toursImages/Vienna.png";
-import Prague from "../../../../assets/toursImages/Prague.png";
 import Budapest from "../../../../assets/toursImages/Budapest.png";
 import nextArrow from "../../../../assets/next.png";
 import prevArrow from "../../../../assets/left-arrow.png";

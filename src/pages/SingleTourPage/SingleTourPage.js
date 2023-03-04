@@ -33,7 +33,7 @@ const SingleTourPage = () => {
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  });
 
   function SampleNextArrow(props) {
     const { className, onClick } = props;
@@ -152,7 +152,7 @@ const SingleTourPage = () => {
           Бронь місць - <span>+48 730 050 547</span> (вайбер, телеграм, ватсап)
         </p>
         <p>Місце збору - Ужгород, готель Закарпаття</p>
-        <IframeWrapper>
+        {/* <IframeWrapper>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d659.4793017211229!2d22.29279552947947!3d48.61142804583526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473919a8f76fd4c3%3A0xd51c1ac80f40b6c0!2z0JjQvdGC0YPRgNC40YHRguKAk9CX0LDQutCw0YDQv9Cw0YLRjNC1!5e0!3m2!1sru!2spl!4v1677875243695!5m2!1sru!2spl"
             width="400"
@@ -161,7 +161,7 @@ const SingleTourPage = () => {
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-        </IframeWrapper>
+        </IframeWrapper> */}
         <hr />
       </OtherInfoSection>
     </Container>

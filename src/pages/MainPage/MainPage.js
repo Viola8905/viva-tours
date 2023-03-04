@@ -10,7 +10,7 @@ const MainPage = () => {
 
   React.useEffect(() => {
     scrollToElement(elementId);
-  }, []);
+  });
 
   return (
     <>
