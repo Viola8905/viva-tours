@@ -71,8 +71,8 @@ export const LinkButton = styled.button`
   padding: 10px 10px;
   font-weight: 500;
   letter-spacing: 0.1em;
-	color: white;
-	font-size: 18px;
+  color: white;
+  font-size: 18px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   @media ${screen.tb} {
     padding: 15px 20px;

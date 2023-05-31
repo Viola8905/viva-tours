@@ -148,7 +148,8 @@ const SingleTourPage = () => {
       <OtherInfoSection>
         <ProgramTitle>Забронювати тур:</ProgramTitle>
         <p>
-          Бронь місць - <span>+48 730 050 547</span> (вайбер, телеграм, ватсап)
+          Бронь місць - <span>+380 95 507 31 73</span> (Viber, Telegram,
+          WhatsApp)
         </p>
         <p>Місце збору - Ужгород, готель Закарпаття</p>
         {/* <IframeWrapper>
